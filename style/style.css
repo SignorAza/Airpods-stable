@@ -35,6 +35,8 @@ body{
 .header__nav{
     background: #282828;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+
+
 }
 .header__nav-container{
     display: flex;
@@ -102,9 +104,6 @@ padding: 5px 0;
 }
 
 
-.main__box:hover{
-    transform: scale(1.07);
-}
 
 .main__box-title{
 font-size: 100px;
@@ -163,6 +162,11 @@ font-family: 'MM';
 
 .section__one-img{
     transition: 600ms;
+    max-width: 333px;
+}
+
+.section__two-img{
+    max-width: 333px;
 }
 
 .section__one-img:hover{
@@ -184,9 +188,13 @@ font-family: 'MM';
     color: #FFFFFF;
     font-family: 'MM';
     }
+    .section__two{
+        max-width: 333px;
+    }
 
     .section__two-img{
         transition: 600ms;
+        max-width: 333px;
     }
     
     .section__two-img:hover{
@@ -198,6 +206,7 @@ font-family: 'MM';
         margin-top: 50px;
         align-items: center;
         gap: 13px;
+        justify-content: space-between;
     }
 
     .section__three-left__text{
@@ -205,7 +214,8 @@ font-size: 20px;
 line-height: 24px;
 text-align: right;
 color: #FFFFFF;
-width: 333px;
+max-width: 333px;
+width: 100%;
 }
 
 .section__three-right__text{
@@ -213,7 +223,16 @@ width: 333px;
     line-height: 24px;
     text-align: right;
     color: #FFFFFF;
-    width: 333px;
+    max-width: 333px;
+    width: 100%;
+   
+
+    }
+
+    .section__three-center{
+        max-width: 333px;
+        display: flex;
+        flex-wrap: wrap;
     }
     
     .section__three-center__img{
@@ -226,6 +245,11 @@ width: 333px;
     .section__three-center__img:hover{
         transform: scale(-1,1);
 
+    }
+
+    .section__three-center__pic{
+        max-width: 333px;
+    
     }
 
   .before::before{
@@ -241,12 +265,15 @@ width: 333px;
     width: 61px;
     height: 1px;
     background: #C4C4C4;
+    gap: 30px;
   }   
 
   .item__box{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 80px;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
 
@@ -302,6 +329,7 @@ color: #FFFFFF;
 background: #282828;
 box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
 margin-top: 55px;
+max-height: 333px;
 }
 
 .footer__box{
@@ -331,12 +359,140 @@ transition: color 300ms;
 .footer__pay{
     display: flex;
     gap: 30px;
+    max-width: 250px;
 }
 
 
 
+@media(max-width:1140px){
+    .section__three-center__pic{
+        width: 100%;
+        width: 222px;
+    }
+    .section__three-left__text,
+    .section__three-right__text{
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .section__three{
+        display: flex;
+        gap: 30px;
+    }
 
+    .before,
+    .after{
+        display: none;
+    }
+}
 
+@media(max-width:750px){
+    .main__box-title{
+        font-size: 45px;
+        line-height: 49px;
+        text-align: center;
+    }
+
+    .main__box__link{
+        font-size: 15px;
+        line-height: 19px; 
+    }
+}
+
+@media(max-width:576px){
+    .footer__pay{
+        max-width: 150px;
+    }
+
+    .footer__pay-visa,
+    .footer__pay-mastercard{
+        max-width: 50px;
+    }
+    .header__nav-link{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .header__logo{
+        max-width: 50%;
+        margin:  0 auto;
+    }
+    .header__nav-box{
+        gap: 10px;
+    }
+    .header__nav-container{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .header__nav-box{
+        flex-direction: column  ;
+    }
+    .section__one,
+    .section__three{
+        flex-direction: column;
+    }
+    .section__two{
+        flex-direction: column-reverse;
+    }
+    .section__one-text,
+    .section__two-text{
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center; 
+    }
+    .section__one-text{
+        margin-bottom: 20px;
+    }
+    
+    .section__one-img{
+        max-width: 200px;
+    }
+    .section__two-img,{ 
+        width:233px;
+    }
+    .section__two-img{
+        width:233px;
+    }
+    .section__three-center__pic{
+        max-width: 200px;
+    }
+    .section__two-text{
+        margin-top: -50px;
+    }
+    .section__three-left__text,
+    .section__three-right__text{
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+    }
+    .items{
+        width: 70%;
+    }
+    .item-img {
+        padding-left: 30px;
+    }
+    
+    .footer__box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+        padding: 20px;
+    }
+    .footer__logo{
+        width: 120px;
+
+    }
+    .footer__nav-link{
+        font-size: 14px;
+        line-height: 19px; 
+    }
+    .footer__pay-visa,
+    .footer__pay-mastercard{
+        width: 25px; 
+    }
+    
+}
 
 
 

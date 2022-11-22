@@ -367,9 +367,7 @@ transition: color 300ms;
     gap: 30px;
     max-width: 250px;
 }
-@media(max-width:1880px){
 
-}
 
 
 @media(max-width:1140px){
@@ -392,14 +390,35 @@ transition: color 300ms;
         display: none;
     }
 }
+
+
+@media(max-width:1139px){
+    .item__box{
+        display: flex;
+       flex-wrap: wrap;
+       gap: 180px;
+      
+    }
+}
+@media(max-width:1060px){
+    .item__box{
+        display: flex;
+       flex-wrap: wrap;
+       gap: 180px;
+       width: 100%;
+      
+    }
+}
+
 @media(max-width:920px){
     .item__box{
         display: flex;
-        width: 100%;
+        flex-wrap: wrap;
         gap: 80px;
     }
 
 }
+
 
 @media(max-width:750px){
     .main__box-title{

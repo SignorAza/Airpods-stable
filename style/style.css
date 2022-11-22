@@ -185,11 +185,14 @@ font-family: 'MM';
     font-size: 22px;
     line-height: 27px;
     color: #FFFFFF;
-    color: #FFFFFF;
     font-family: 'MM';
     }
     .section__two{
-        max-width: 333px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        gap: 30px;
+        align-items: center;
     }
 
     .section__two-img{
@@ -361,7 +364,9 @@ transition: color 300ms;
     gap: 30px;
     max-width: 250px;
 }
-
+@media(max-width:2140px){
+    
+}
 
 
 @media(max-width:1140px){
